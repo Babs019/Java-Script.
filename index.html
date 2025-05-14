@@ -69,8 +69,8 @@
         // let newSentence = sentence.replace("love", "hate"); 
         // console.log(newSentence); // I hate coffee.
 
-        let price = 12.345;
-        console.log(price.toFixed(1)); // 12.3
+        // let price = 12.345;
+        // console.log(price.toFixed(1)); // 12.3
 
         // let score = 89.6;
         // console.log(Math.round(score)); // 90
@@ -167,7 +167,7 @@
         // console.log("Hello " + person.get("name"));
 
 
-        let colours = ["Blue", "Red", "Pink", "Yellow"];
+        // let colours = ["Blue", "Red", "Pink", "Yellow"];
         // colours.shift("Purple");// remove first element
         // colours.pop("Green"); // remove last element
         // colours.unshift("Green"); // add first element
@@ -177,59 +177,192 @@
         // let result = colours.splice(1, 3); // remove element from index 1 to 3
 
 
-        console.log(colours.indexOf("Yellow")); 
-        console.log(colours.includes("Blue")); 
-        console.log(); 
+        // console.log(colours.indexOf("Yellow")); 
+        // console.log(colours.includes("Blue")); 
+        // console.log(); 
 
-        colours2 = ["Blue", "Red", "Pink", "Yellow"];
+        // colours2 = ["Blue", "Red", "Pink", "Yellow"];
         
-        let merged = colours.concat(colours2);
-        console.log(merged); 
+        // let merged = colours.concat(colours2);
+        // console.log(merged); 
 
-        console.log(colours.join("-")); 
-        console.log(colours.join("/"));
-        console.log(colours.join(","));
-        console.log(colours.join(" "));
+        // console.log(colours.join("-")); 
+        // console.log(colours.join("/"));
+        // console.log(colours.join(","));
+        // console.log(colours.join(" "));
         
-        let number = [4, 3, 8, 6, 9, 5]
-        console.log(number.find((x) => x > 2));
+        // let number = [4, 3, 8, 6, 9, 5]
+        // console.log(number.find((x) => x > 2));
 
-        number2 = [4, 3, 8, 6, 9, 5]
-        console.log(number.filter((x) => x > 2));
-
-
-        number4 = [4, 3, 8, 6, 9, 5]
-        console.log(number.map((x) => x * 2));
+        // number2 = [4, 3, 8, 6, 9, 5]
+        // console.log(number.filter((x) => x > 2));
 
 
-        number5 = [4, 3, 8, 6, 9, 5]
-        console.log(number.filter((x) => x % 2 === 0));
-        console.log(number.filter((x) => x % 2 !== 0));
-        console.log(number.filter((x) => x % 2 === 0).map((x) => x * 2));
-        console.log(number.filter((x) => x % 2 !== 0).map((x) => x * 2));
-
-        number6 = [4, 3, 8, 6, 9, 5]    
-        console.log(number.reduce((acc, x) => acc + x, 0)); // 35
+        // number4 = [4, 3, 8, 6, 9, 5]
+        // console.log(number.map((x) => x * 2));
 
 
-        number7 = [4, 3, 8, 6, 9, 5]
-        function isPrime(num) {
-            if (num <= 2) return false;
-            for (let i = 2; i <= Math.sqrt(num); i++) {
-                if (num % i === 0) return false;
-            }
-            return true;
-        }   
-        let primes = number7.filter(isPrime);
-        console.log(primes); // [3, 5]
+        // number5 = [4, 3, 8, 6, 9, 5]
+        // console.log(number.filter((x) => x % 2 === 0));
+        // console.log(number.filter((x) => x % 2 !== 0));
+        // console.log(number.filter((x) => x % 2 === 0).map((x) => x * 2));
+        // console.log(number.filter((x) => x % 2 !== 0).map((x) => x * 2));
+
+        // number6 = [4, 3, 8, 6, 9, 5]    
+        // console.log(number.reduce((acc, x) => acc + x, 0)); // 35
+
+
+        // number7 = [4, 3, 8, 6, 9, 5]
+        // function isPrime(num) {
+        //     if (num <= 2) return false;
+        //     for (let i = 2; i <= Math.sqrt(num); i++) {
+        //         if (num % i === 0) return false;
+        //     }
+        //     return true;
+        // }   
+        // let primes = number7.filter(isPrime);
+        // console.log(primes); // [3, 5]
          
 
-        number8 = [4, 3, 8, 6, 9, 5]
-        let stringNumbers = number8.map(String);
-        console.log(number8.toString());
+        // number8 = [4, 3, 8, 6, 9, 5]
+        // let stringNumbers = number8.map(String);
+        // console.log(number8.toString());
         
+        let age = 20;
+
+        if (age >= 18) {
+            console.log("Adult.");
+        } else {
+            console.log("Minor.");
+        }   
+
+        let number = 21;
+
+        if (number % 2 === 0) {
+            console.log(number + " Even number.");
+        } else {
+            console.log(number + " Odd number.");
+        }
+
+        const userLogin = {
+            username: "Babatunde",
+            password: "password123",
+        };
+        if (userLogin.username === "Babatunde" && userLogin.password === "password123") {
+            console.log("Login successful.");
+        } else {
+            console.log("Login failed.");
+        }
+
+        let batteryPercentage = 10;
+
+        if (batteryPercentage >= 80) {
+            console.log("Green.");
+        } else if (batteryPercentage >= 50) {
+            console.log("Green.");
+        } else if (batteryPercentage >= 20) {
+            console.log("Yellow.");
+        } else {
+            console.log("Red.");
+        }   
+
+        let Grade = 69;
+
+        if (Grade >=70) {
+            console.log("A");
+        } else if (Grade >= 60) {
+            console.log("B");
+        } else if (Grade >= 50) {
+            console.log("C");
+        } else if (Grade >= 45) {
+            console.log("D");
+        } else {
+            console.log("Fail");
+        } 
+
+        let number1 = 10;
+
+        if (number1 > 0) {
+            console.log("Positive number.");
+        } else if (number1 < 0) {
+            console.log("Negative number.");
+        } else {
+            console.log("Zero.");
+        }
+
+        let day = "Monday";
+
+        switch (day) {
+            case "Monday":
+                console.log("Start of the week.");
+                break;
+            case "Tuesday":
+                console.log("Second day of the week.");
+                break;
+            case "Wednesday":
+                console.log("Midweek.");
+                break;
+            case "Thursday":
+                console.log("Almost weekend.");
+                break;
+            case "Friday":
+                console.log("End of the work week.");
+                break;
+            case "Saturday":
+                console.log("Weekend!");
+                break;
+            case "Sunday":
+                console.log("Rest day.");
+                break;
+            default:
+                console.log("Invalid day.");
+        }
+        
+        // let trafficLight = "Red";
+        // switch (trafficLight) {
+        //     case "Red":
+        //         console.log("Stop.");
+        //         break;
+        //     case "Yellow":
+        //         console.log("Get ready to stop.");
+        //         break;
+        //     case "Green":
+        //         console.log("Go.");
+        //         break;
+        //     default:
+        //         console.log("NO traffic light color.");
+        // }
+
+        let trafficLight = "Red";
+
+        switch (trafficLight) {
+            case "Red" :
+               console.log("Stop");
+                break;
+            case "Yellow" :
+                console.log("Get Ready");
+                break;
+            case "Green" : 
+                console.log("Go");
+                break;
+            default: 
+                console.log("no light");
+        }
         
 
+        let age1 = 17;
+        let message = age1 >= 18 ? "Adult" : "Minor";
+        console.log(message); 
+
+        let num1 = 21;
+        console.log(num1 % 2 !== 0  ? "Even" : "Odd");
+
+        // function add(a, b) {
+        //     return a + b;
+            
+             
+
+        // }
     </script>
 </body>
 </html> 
