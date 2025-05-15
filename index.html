@@ -6,9 +6,10 @@
     <title>Java Script Doc</title>
 </head>
 <body>
-    <button id="add">add</button>
-    <button id="remove">remove</button>
-    <p>0</p>
+    <!-- <button id="add">add</button>
+    <button id="remove">remove</button> -->
+    <p>Text</p>
+    <p>Text 2</p>
     <script>
         // let name = "Babatunde";
         // console.log(name.length); // 8
@@ -357,12 +358,63 @@
         let num1 = 21;
         console.log(num1 % 2 !== 0  ? "Even" : "Odd");
 
-        // function add(a, b) {
-        //     return a + b;
-            
-             
+        let isLoggedIn = true;
+        let message1 = isLoggedIn ? "Welcome back!" : "Please log in.";
+        console.log(message1);
 
+
+        function add(a, b) {
+            return a + b;
+        }
+        let result = add(5, 3);
+        console.log(result);
+
+        function multiply(a, b) {
+            return a * b;
+        }
+        let result1 =multiply(5, 3);
+        console.log(result1);
+
+        function substract(a, b) {
+            return a - b;
+        }
+        let result2 =substract(5, 3);
+        console.log(result2);
+
+        function divide(a, b) {
+            return a / b;
+        }
+        let result3 =divide(5, 3);
+        console.log(result3);
+
+        function square(num) {
+            return num * num;
+        }
+        console.log(square(5));
+
+
+        // function greet(name) {
+        //     return "Hello" + name + "";
         // }
+        // let greeting = greet(" Babatunde");
+        // console.log(greeting);
+        
+        function greet(name) {
+        console.log("Hello, " + name);
+        }
+        greet("Babatunde");
+        greet("Tunde");
+
+        setTimeout(() => {
+            console.log("Hello, Babatunde");
+        }, 60000);
+       
+        function evenOrOdd(num) { 
+            return num % 2 === 0 ? "Even" : "Odd";
+        }
+        console.log(evenOrOdd(4));
+
+          
     </script>
 </body>
 </html> 
