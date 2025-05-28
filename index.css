@@ -1,0 +1,49 @@
+/* body {
+    padding: 100px;
+}
+
+h1 {
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+
+} 
+
+button {
+    padding: 10px 20px;
+    width: fit-content;
+
+}
+section {
+    width: 70%;
+    display: flex;
+    gap : 10px;
+}
+input {
+    padding: 10px;
+    width: 60%;
+    border-radius: 4px;
+    border: 1px solid black;
+    outline: none;
+    
+} */
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  text-decoration-style:line;
+  text-decoration-color: red;
+}
+li {
+  margin: 10px 0;
+  list-style: none;
+}
+
+button {
+  margin-left: 10px;
+}
