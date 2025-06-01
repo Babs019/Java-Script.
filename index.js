@@ -87,33 +87,121 @@
     
 // });
 
-document.getElementById("addBtn").addEventListener("click", function() {
-    const input = document.getElementById("taskInput");
-    const taskText = input.value.trim();
 
-    if (taskText === "") {
-        alert("Please enter valid input.");
-        return;
-    }
 
-    const li = document.createElement("li");
-    li.textContent = taskText;
+// const inputUsername = document.querySelector("#input-username");
+// const inputPassword = document.querySelector("#input-password");
+// const btn = document.querySelector("button");
 
-    //Completed 
-    const completeBtn = document.createElement("button");
-    completeBtn.textContent = "Completed";
-    completeBtn.onClick = () => li.classList.toggle("completed");
+// btn.addEventListener("click", function() {
+//     const value1 = inputUsername.value;
+//     const value2 = inputPassword.value;
 
-    //delete Button
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "delete";
-    deleteBtn.onClick = () => li.remove();  
+//     alert(value1 + " " + value2);
+//     if (value1 === "" && value2 === "") {
+//         alert("Please fill in both fields.");
+//     } else {
+//         alert("Login successful!");
+//     }
+// })
 
-    li.appendChild(completeBtn);
-    li.appendChild(deleteBtn);
 
-    document.getElementById("taskList").appendChild(li);    
+// add/remove button example
+// const addBtn = document.querySelector(".btn-add");
+// const removeBtn = document.querySelector(".btn-remove");
+// let count = 0;
 
-    input.value = ""; // Clear the input field  
+// addBtn.addEventListener("click", function() {
+//     count++;
+//     document.querySelector("#count").textContent = count;
+// });
+//    removeBtn.addEventListener("click", function() {
+//     if (count >= 1) {
+//     count--;
+//     document.querySelector("#count").textContent = count;
+//     }
+// });
 
-});
+
+
+
+
+
+// document.getElementById("addBtn").addEventListener("click", function() {
+//     const input = document.getElementById("taskInput");
+//     const taskText = input.value.trim();
+
+//     if (taskText === "") {
+//         alert("Please enter valid input.");
+//         return;
+//     }
+
+//     const li = document.createElement("li");
+//     li.textContent = taskText;
+
+//     //Completed 
+//     const completeBtn = document.createElement("button");
+//     completeBtn.textContent = "Completed";
+//     completeBtn.onClick = () => li.classList.toggle("completed");
+
+//     //delete Button
+//     const deleteBtn = document.createElement("button");
+//     deleteBtn.textContent = "delete";
+//     deleteBtn.onClick = () => li.remove();  
+
+//     li.appendChild(completeBtn);
+//     li.appendChild(deleteBtn);
+
+//     document.getElementById("taskList").appendChild(li);    
+
+//     input.value = ""; // Clear the input field  
+
+// });
+
+
+
+
+// fetch("https://dummyjson.com/products")
+//   .then((response) => response.json())
+//   .then((data) => console.log(data))
+//   .catch((error) => console.log("error", error));
+
+const getApi = async () => {
+  try {
+    const response = await fetch("https://dummyjson.com/products");
+    const data = await response.json();
+
+    // const filteredProduct = data.products
+    // filteredProduct.filter((p) => p.price < 10);
+    // const first20 = data.products.slice(0, 20); 
+
+    console.log(data.products);
+    displayProducts(data.products); 
+  } catch(error) {
+    console.error("Error", error);
+  }
+};
+
+
+// Render product cards
+function displayProducts(products) {
+    const list = document.getElementById("productList");
+    list.innerHTML = ""; // Clear existing content
+
+    products.forEach((product) => {
+      const li = document.createElement("li");
+      li.className = "product";
+      li.innerHTML = `
+            <img src="${product.thumbnail}" alt="${product.title}">
+            <h3>${product.title}</h3>
+            <p>Price: $${product.price}</p>
+            <p>${product.description.slice(0, 60)}...</p>
+            <p>comment: ${product.reviews[0].comment}</p>
+            
+        `;
+        list.appendChild(li); 
+    });
+} 
+
+// Automacally run on page load
+window.addEventListener("DOMContentLoaded",getApi);
