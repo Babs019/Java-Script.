@@ -166,42 +166,110 @@
 //   .then((data) => console.log(data))
 //   .catch((error) => console.log("error", error));
 
-const getApi = async () => {
-  try {
-    const response = await fetch("https://dummyjson.com/products");
-    const data = await response.json();
+// const getApi = async () => {
+//   try {
+//     const response = await fetch("https://dummyjson.com/products");
+//     const data = await response.json();
 
-    // const filteredProduct = data.products
-    // filteredProduct.filter((p) => p.price < 10);
-    // const first20 = data.products.slice(0, 20); 
+//     // const filteredProduct = data.products
+//     // filteredProduct.filter((p) => p.price < 10);
+//     // const first20 = data.products.slice(0, 20); 
 
-    console.log(data.products);
-    displayProducts(data.products); 
-  } catch(error) {
-    console.error("Error", error);
-  }
-};
+//     console.log(data.products);
+//     displayProducts(data.products); 
+//   } catch(error) {
+//     console.error("Error", error);
+//   }
+// };
 
 
-// Render product cards
-function displayProducts(products) {
-    const list = document.getElementById("productList");
-    list.innerHTML = ""; // Clear existing content
+// // Render product cards
+// function displayProducts(products) {
+//     const list = document.getElementById("productList");
+//     list.innerHTML = ""; // Clear existing content
 
-    products.forEach((product) => {
-      const li = document.createElement("li");
-      li.className = "product";
-      li.innerHTML = `
-            <img src="${product.thumbnail}" alt="${product.title}">
-            <h3>${product.title}</h3>
-            <p>Price: $${product.price}</p>
-            <p>${product.description.slice(0, 60)}...</p>
-            <p>comment: ${product.reviews[0].comment}</p>
+//     products.forEach((product) => {
+//       const li = document.createElement("li");
+//       li.className = "product";
+//       li.innerHTML = `
+//             <img src="${product.thumbnail}" alt="${product.title}">
+//             <h3>${product.title}</h3>
+//             <p>Price: $${product.price}</p>
+//             <p>${product.description.slice(0, 60)}...</p>
+//             <p>comment: ${product.reviews[0].comment}</p>
             
-        `;
-        list.appendChild(li); 
-    });
-} 
+//         `;
+//         list.appendChild(li); 
+//     });
+// } 
 
-// Automacally run on page load
-window.addEventListener("DOMContentLoaded",getApi);
+// // Automacally run on page load
+// window.addEventListener("DOMContentLoaded",getApi);
+
+// const btn = $("button");
+
+// btn.Hide();
+
+// $("button").click(function() {
+//     alert("Button was clicked!");
+// });
+
+// $("button").hover(function() {
+//     alert("Button was clicked!");
+// });
+
+// document.querySelector("button").addEventListener("click", function() {
+//     alert("Button was clicked!");
+// }); 
+
+
+// $.get("https://dummyjson.com/products", function(response) {
+//     console.log(response.products);
+// }).catch((error) => console.error("Error fetching products:", error));
+
+// fetch("https://dummyjson.com/products")
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log(data.products);
+//     const list = document.getElementById("productList");
+//     data.products.forEach((product) => {
+//       const li = document.createElement("li");
+//       li.className = "product";
+//       li.innerHTML = `
+//         <img src="${product.thumbnail}" alt="${product.title}">
+//         <h3>${product.title}</h3>
+//         <p>Price: $${product.price}</p>
+//         <p>${product.description.slice(0, 60)}...</p>
+//         <p>comment: ${product.reviews[0].comment}</p>
+//       `;
+//       list.appendChild(li);
+//     });
+//   })
+//   .catch((error) => console.error("Error fetching products:", error));
+
+// const getApi = async () => {
+//   try {
+//     const response = await fetch("https://dummyjson.com/products");
+//     const data = await response.json();
+
+//     console.log(data.products);
+//     displayProducts(data.products);
+//   } catch (error) {
+//     console.error("Error fetching products:", error);
+//   }
+// };
+
+
+
+
+// On button click:
+$("button").click(function() {
+    alert("Hello Mike!");
+
+    $("p").css("color", "blue");
+
+    $("Div").toggle();
+});
+
+
+
